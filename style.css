@@ -1,13 +1,13 @@
 
-
 *{
   box-sizing: border-box;
 }
+
 .container {
- /* border: 1px solid #ccc;  /* 標示用，完成排版後刪除*/
   width: 800px;
   margin: 0 auto;
 }
+
 #nav {
   background-color: #ff6600;
   width: 100%;
@@ -15,57 +15,41 @@
     position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;    /* 加上這一行 */
+  z-index: 100;    
 }
 
-#content {
-  /*border: 1px solid blue;*/
-}
-#content {
- /* border: 1px solid blue; /* 標示用，完成排版後刪除*/
+#content{
   position: relative;
   top: 78px;
   padding: 15px;
 }
-.container {
-  /*border: 1px solid #ccc;*/
-}
+
 #content > .container > div {
   padding: 78px 0;
 }
-
 
 hr.bar {
   border: 2px solid #ff6600;
   width: 80px;
 }
 
-
-
-
 .menu {
   float: right;
 }
 
-
 h1 {
   text-align: center;
-      margin: 25px 5px;
+  margin: 25px 5px;
 }
 
 #about h1 {
   margin-bottom: 0;
   text-align: left;
 }
-
-
 #my-work-gallery {
     text-align: center;
 }
 
-#about, #my-work, #contact-me {
-/*  border: 1px solid yellow;*/
-}
 .menu li {
   width: 150px;
   padding: 10px 0px;
@@ -85,7 +69,6 @@ a {
 }
 
 li:hover  {
-  /*border: 1px solid #ff6600;*/
   background-color: #fff;
 }
 
@@ -96,7 +79,6 @@ li:hover a {
 /* about me */
 
 #my-avatar {
-  /*border: 1px solid red;  /* 標示用，排版完記得拿掉 */
   float: left;
 }
 #my-avatar {
@@ -106,10 +88,6 @@ li:hover a {
 
 #my-avatar img {
   width: 200px;
-}
-
-h1 {
- /* margin-bottom: 0;*/
 }
 
 h3 {
@@ -161,12 +139,7 @@ width: 100%;
   opacity: 1;
 }
 
-#contact-me {
- /* border: 1px solid green;  /* 標示用，完成後刪除 */
-}
-
 form.contact-form {
- /* border: 1px solid red;  /* 標示用，完成後刪除 */
   width: 50%;
   margin: 0 auto;
 }
@@ -179,7 +152,6 @@ form.contact-form {
 .form-row input, .form-row textarea {
   border-radius: 3px;
   width: 100%;
-  /*border: 1px solid #D6D9DC;*/
   padding: 7px;
 }
 
@@ -205,4 +177,84 @@ form.contact-form {
 
 .form-row button:active {
   background-color: #407FC7;
+}
+
+/*▲▲▲▲▲▲▲原始 css code▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲*/
+
+    
+  
+@media screen and (min-width: 1024px) {
+	.menu-button,
+    .menu-button-checkbox {
+		display: none;
+	}
+  
+}
+/*手機版的 css 都寫在這邊*/ 
+@media screen and (max-width: 1023px) {
+  .container {
+		width: auto;
+  }
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+	opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+   /* background: red;*/
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+  #content {
+  
+    top: 20px;
+
+}
+  #my-avatar {
+	width: 100%; 
+  }
+
+  #my-avatar img {
+	display: block;
+    margin: 15px auto;
+  }
+   .item {
+    max-width: 100%;
+  }
+  
+  #content > .container > div {
+    padding: 0px;
+  }
+    form.contact-form {
+    width: 80%;
+  }
+
 }
